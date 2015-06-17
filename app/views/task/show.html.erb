@@ -1,0 +1,9 @@
+<h1>Oh? You wanted to know about "<%= @task.name %>"?</h1>
+
+<section class='task'>
+  <span><strong>Task Name:</strong> <%= @task.name %></span>
+  <span><strong>Task Description:</strong> <%= @task.description %></span>
+  <span><strong>Complete?</strong> <%= @task.completed_at ? "Yes, on #{ @task.completed_at }" : 'No' %></span>
+</section>
+
+<%= link_to "Back to all tasks.", root_path %>

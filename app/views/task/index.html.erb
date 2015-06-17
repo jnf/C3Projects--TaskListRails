@@ -1,0 +1,8 @@
+<h1>Hi! Here are some tasks. ^_^</h1>
+<ul>
+  <% @tasks.each do |task| %>
+    <li class="<%= task.completed_at && 'complete' %>">
+      <%= link_to task.name, "/task/#{task.id}" %>
+    </li>
+  <% end %>
+</ul>
